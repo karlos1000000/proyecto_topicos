@@ -5,11 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:api": "cd api && npm run dev",
+    "predev:all": "npm run api:install",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:api\"",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "api:install": "cd api && npm install",
+    "api:start": "cd api && npm start"
   },
   "dependencies": {
-    "vue": "^3.5.24"
+    "vue": "^3.5.24",
+    "concurrently": "^8.2.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.17",

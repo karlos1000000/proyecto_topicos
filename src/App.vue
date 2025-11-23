@@ -1,23 +1,12 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
-const count = ref(0);
+import SubscriptionList from "./components/SubscriptionList.vue";
 </script>
 
 <template>
   <div
-    class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center"
+    class="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-8 px-4"
   >
-    <div class="text-center">
-      <h1 class="text-5xl font-bold text-gray-800 mb-8">Hola mundo</h1>
-      <button
-        type="button"
-        @click="count++"
-        class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 active:scale-95"
-      >
-        Count is {{ count }}
-      </button>
-    </div>
+    <SubscriptionList />
   </div>
 </template>
 
